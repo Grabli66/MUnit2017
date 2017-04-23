@@ -37,9 +37,6 @@ install:
 #    else
 #      haxelib install hxcpp;
 #    fi
-  - whereis python
-  - whereis python2
-  - whereis python3
   - haxelib install hxcpp;
   - haxelib install hxjava;
   - haxelib install hxcs;

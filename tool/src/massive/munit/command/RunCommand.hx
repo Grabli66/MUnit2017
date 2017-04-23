@@ -467,7 +467,7 @@ class RunCommand extends MUnitTargetCommandBase {
 		var reportRunnerFile = reportRunnerDir.resolvePath(file.fileName);
 		file.copyTo(reportRunnerFile);
 		FileSys.setCwd(config.dir.nativePath);
-		var exitCode = runProgram('python3', [reportRunnerFile.nativePath]);
+                var exitCode = runProgram('python3', ['$file']);
 		FileSys.setCwd(console.originalDir.nativePath);
 		if(exitCode > 0) error('Error ($exitCode) running $file', exitCode);
 		return exitCode;
@@ -475,6 +475,7 @@ class RunCommand extends MUnitTargetCommandBase {
 	
 	function runProgram(name:String, ?args:Array<String>) {
 		var process = new Process(name, args);
+                trace (name, args);
 		try {
 			while(true) {
 				Sys.sleep(0.01);
