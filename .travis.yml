@@ -26,9 +26,6 @@ before_install:
   - mono --version;
   - python --version;
 
-python:
-  "3.6.1"
-
 install:
 #  - yes | haxelib install test.hxml
 #  - if [ "${TRAVIS_HAXE_VERSION}" = "development" ]; then
