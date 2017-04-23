@@ -37,6 +37,8 @@ install:
 #    else
 #      haxelib install hxcpp;
 #    fi
+  - rm /usr/bin/python
+  - ln -s /usr/bin/python3 /usr/bin/python
   - haxelib install hxcpp;
   - haxelib install hxjava;
   - haxelib install hxcs;
