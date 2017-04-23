@@ -475,7 +475,6 @@ class RunCommand extends MUnitTargetCommandBase {
 	
 	function runProgram(name:String, ?args:Array<String>) {
 		var process = new Process(name, args);
-                trace (name, args);
 		try {
 			while(true) {
 				Sys.sleep(0.01);
